@@ -1,0 +1,469 @@
+.text-hide {
+		position: absolute;
+		top: 0;
+		left: -9999px;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background: url(../images/bg.jpg);
+	background-size: 100%;
+	background-attachment: fixed;
+}
+
+body, html {
+	width: 100%;
+	height: 100%;
+}
+
+.wrapper {
+	min-height: 100%;
+	position: relative;
+}
+
+.container:after {
+	height: 60px;  
+}
+
+.footer {
+	height: 60px;
+	margin-top: -60px;  
+	position: relative;
+	background-image: -moz-linear-gradient( 90deg, rgb(233,230,229) 0%, rgb(251,249,249) 94%, rgb(255,255,255) 100%);
+	background-image: -webkit-linear-gradient( 90deg, rgb(233,230,229) 0%, rgb(251,249,249) 94%, rgb(255,255,255) 100%);
+	background-image: -ms-linear-gradient( 90deg, rgb(233,230,229) 0%, rgb(251,249,249) 94%, rgb(255,255,255) 100%);
+	box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, .1);
+}
+
+.container-footer {
+	display: table;
+	width: 620px;
+	margin: 0 auto;
+	height: 100%;
+}
+
+.login {
+	display: table-cell;
+	width: 74px;
+	height: 100%;
+	vertical-align: middle;
+	font-size: 14px;
+	text-decoration: none;
+	padding-left: 30px;
+	background: url(../images/ico/sprites-main.png) -511px -6px;
+	color: #9c9c9c;
+	font-weight: bold;
+}
+
+.login:hover {
+	background: url(../images/ico/sprites-main.png) -798px -6px;
+}
+
+.footer-text {
+	padding-left: 60px;
+	display: table-cell;
+	vertical-align: middle;
+	font-size: 12px;
+}
+
+.header {
+	background: #727070;
+	height: 97px;
+	border-bottom: 7px solid #ffffff;
+	box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, .1);
+}
+
+.container {
+	width: 960px;
+	margin: 0 auto;
+}
+
+.container-width {
+	width: 1192px;
+	display: table;
+	height: 100%;
+}
+
+.clearfix:before,
+.clearfix:after {
+	 content: " ";
+	 display: table;
+}
+.clearfix:after {
+	 clear: both;
+}
+
+.content {
+	margin-top: 35px;	
+}
+
+.nav {
+	height: 165px;
+	width:  250px;
+	margin-bottom: 35px;
+	border-radius: 5px;
+	overflow: hidden;
+}
+
+.contacts {
+	width: 250px;
+	overflow: hidden;
+	border-radius: 5px;
+}
+
+.sidebar {
+	float: left;
+}
+
+.content-area {
+	float: right;
+}
+
+.social {
+	display: table-cell;
+	vertical-align: middle;
+	text-align: right;
+	list-style: none;
+	padding: 0;
+}
+
+.social-item {
+	margin-left: 10px;
+	display: inline-block;
+	border-radius: 50%;
+	width: 36px;
+	height: 36px;
+	background-image: -moz-linear-gradient( 90deg, rgb(233,230,228) 0%, rgb(251,249,249) 94%, rgb(255,255,255) 100%);
+	background-image: -webkit-linear-gradient( 90deg, rgb(233,230,228) 0%, rgb(251,249,249) 94%, rgb(255,255,255) 100%);
+	background-image: -ms-linear-gradient( 90deg, rgb(233,230,228) 0%, rgb(251,249,249) 94%, rgb(255,255,255) 100%);
+	box-shadow: 0px 2px 1px 0px rgba(9, 9, 9, 0.31),inset 0px -2px 3px 0px rgba(41, 41, 41, 0.05);
+}
+
+.logo {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.social-item-link {
+	display: inline-block;
+	width: 36px;
+	height: 36px;
+	overflow: hidden;
+	border-radius: 50%;
+}
+
+.fb {
+	background: url(../images/ico/sprites-main.png) -85px -20px;
+}
+
+.vk {
+	background: url(../images/ico/sprites-main.png) -866px -19px;
+}
+
+.tw {
+	background: url(../images/ico/sprites-main.png) -650px -19px;
+}
+
+.git {
+	background: url(../images/ico/sprites-main.png) -279px -20px;
+}
+
+.nav-ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.nav-elem {
+	height: 55px;
+	padding-left: 27px;
+    background-image: -moz-linear-gradient( 90deg, rgb(233,230,229) 0%, rgb(251,249,249) 94%, rgb(255,255,255) 100%);
+    background-image: -webkit-linear-gradient( 90deg, rgb(233,230,229) 0%, rgb(251,249,249) 94%, rgb(255,255,255) 100%);
+    background-image: -ms-linear-gradient( 90deg, rgb(233,230,229) 0%, rgb(251,249,249) 94%, rgb(255,255,255) 100%);
+    box-shadow: 0px 2px 1px 0px rgba(9, 9, 9, 0.07),inset 0px -2px 3px 0px rgba(41, 41, 41, 0.05);
+
+}
+
+.nav-elem:hover {
+	background-image: -moz-linear-gradient( 90deg, rgb(194,192,192) 0%, rgb(227,225,225) 87%, rgb(230,228,228) 90%, rgb(232,231,231) 100%);
+	background-image: -webkit-linear-gradient( 90deg, rgb(194,192,192) 0%, rgb(227,225,225) 87%, rgb(230,228,228) 90%, rgb(232,231,231) 100%);
+	background-image: -ms-linear-gradient( 90deg, rgb(194,192,192) 0%, rgb(227,225,225) 87%, rgb(230,228,228) 90%, rgb(232,231,231) 100%);
+	box-shadow: inset 0px -2px 3px 0px rgba(41, 41, 41, 0.05);
+}
+
+.active {
+	background-image: -moz-linear-gradient( 90deg, rgb(62,183,153) 0%, rgb(126,232,206) 100%);
+	background-image: -webkit-linear-gradient( 90deg, rgb(62,183,153) 0%, rgb(126,232,206) 100%);
+	background-image: -ms-linear-gradient( 90deg, rgb(62,183,153) 0%, rgb(126,232,206) 100%);
+	box-shadow: 0px 2px 1px 0px rgba(9, 9, 9, 0.16),inset 0px 1px 0px 0px rgba(255, 255, 255, 0.3);
+}
+
+.active:hover {
+	background-image: -moz-linear-gradient( 90deg, rgb(62,183,153) 0%, rgb(126,232,206) 100%);
+	background-image: -webkit-linear-gradient( 90deg, rgb(62,183,153) 0%, rgb(126,232,206) 100%);
+	background-image: -ms-linear-gradient( 90deg, rgb(62,183,153) 0%, rgb(126,232,206) 100%);
+	box-shadow: 0px 2px 1px 0px rgba(9, 9, 9, 0.16),inset 0px 1px 0px 0px rgba(255, 255, 255, 0.3);
+}
+
+.nav-link {
+	vertical-align: middle;
+	line-height: 55px;
+	text-decoration: none;
+	color: #727070;
+	font-size: 20px;
+}
+
+.contacts-title {
+	height: 40px;
+	background-image: -moz-linear-gradient( 90deg, rgb(220,177,93) 0%, rgb(244,204,126) 90%);
+	background-image: -webkit-linear-gradient( 90deg, rgb(220,177,93) 0%, rgb(244,204,126) 90%);
+	background-image: -ms-linear-gradient( 90deg, rgb(220,177,93) 0%, rgb(244,204,126) 90%);
+	box-shadow: 0px 2px 1px 0px rgba(9, 9, 9, 0.17),inset 0px 1px 0px 0px rgba(255, 255, 255, 0.25);
+}
+
+.contacts-title-text {
+	margin-left: 27px;
+	vertical-align: middle;
+	line-height: 40px;
+	font-size: 20px;
+}
+
+.contacts-list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.contacts-list-link {
+	display: block;
+	padding-left: 97px;
+	line-height: 38px;
+	vertical-align: middle;
+	text-decoration: none;
+	border-style: solid;
+	border-width: 1px;
+	border-color: rgb(214, 213, 211);
+	box-shadow: inset 0px 2px 2px 0px rgba(114, 112, 112, 0.1);
+	margin-top: -1px;
+}
+
+.mail {
+	background: url(../images/ico/sprites-contact.png) 0px -85px no-repeat, url(../images/ico/sprites-contact.png) 30px -20px no-repeat, -moz-linear-gradient( 90deg, rgb(233,230,229) 0%, rgb(251,249,249) 94%, rgb(255,255,255) 100%);
+	background: url(../images/ico/sprites-contact.png) 0px -85px no-repeat, url(../images/ico/sprites-contact.png) 30px -20px no-repeat, -webkit-linear-gradient( 90deg, rgb(233,230,229) 0%, rgb(251,249,249) 94%, rgb(255,255,255) 100%);
+	background: url(../images/ico/sprites-contact.png) 0px -85px no-repeat, url(../images/ico/sprites-contact.png) 30px -20px no-repeat, -ms-linear-gradient( 90deg, rgb(233,230,229) 0%, rgb(251,249,249) 94%, rgb(255,255,255) 100%);
+}
+
+.telephone {
+	background: url(../images/ico/sprites-contact.png) 0px -200px no-repeat, url(../images/ico/sprites-contact.png) 30px -20px no-repeat, -moz-linear-gradient( 90deg, rgb(233,230,229) 0%, rgb(251,249,249) 94%, rgb(255,255,255) 100%);
+	background: url(../images/ico/sprites-contact.png) 0px -200px no-repeat, url(../images/ico/sprites-contact.png) 30px -20px no-repeat, -webkit-linear-gradient( 90deg, rgb(233,230,229) 0%, rgb(251,249,249) 94%, rgb(255,255,255) 100%);
+	background: url(../images/ico/sprites-contact.png) 0px -200px no-repeat, url(../images/ico/sprites-contact.png) 30px -20px no-repeat, -ms-linear-gradient( 90deg, rgb(233,230,229) 0%, rgb(251,249,249) 94%, rgb(255,255,255) 100%);
+}
+
+.skype {
+	background: url(../images/ico/sprites-contact.png) 0px -140px no-repeat, url(../images/ico/sprites-contact.png) 30px -20px no-repeat, -moz-linear-gradient( 90deg, rgb(233,230,229) 0%, rgb(251,249,249) 94%, rgb(255,255,255) 100%);
+	background: url(../images/ico/sprites-contact.png) 0px -140px no-repeat, url(../images/ico/sprites-contact.png) 30px -20px no-repeat, -webkit-linear-gradient( 90deg, rgb(233,230,229) 0%, rgb(251,249,249) 94%, rgb(255,255,255) 100%);
+	background: url(../images/ico/sprites-contact.png) 0px -140px no-repeat, url(../images/ico/sprites-contact.png) 30px -20px no-repeat, -ms-linear-gradient( 90deg, rgb(233,230,229) 0%, rgb(251,249,249) 94%, rgb(255,255,255) 100%);
+}
+
+.mail:hover {
+	text-decoration: underline;
+	background: url(../images/ico/sprites-contact.png) 0px -85px no-repeat, url(../images/ico/sprites-contact.png) 30px -20px no-repeat, -moz-linear-gradient( 90deg, rgb(224,197,145) 0%, rgba(251,249,249,1) 100%);
+	background: url(../images/ico/sprites-contact.png) 0px -85px no-repeat, url(../images/ico/sprites-contact.png) 30px -20px no-repeat, -webkit-linear-gradient( 90deg, rgb(224,197,145) 0%, rgba(251,249,249,1) 100%);
+	background: url(../images/ico/sprites-contact.png) 0px -85px no-repeat, url(../images/ico/sprites-contact.png) 30px -20px no-repeat, -ms-linear-gradient( 90deg, rgb(224,197,145) 0%, rgba(251,249,249,1) 100%);
+
+}
+
+.skype:hover {
+	text-decoration: underline;
+	background: url(../images/ico/sprites-contact.png) 0px -140px no-repeat, url(../images/ico/sprites-contact.png) 30px -20px no-repeat, -moz-linear-gradient( 90deg, rgb(224,197,145) 0%, rgba(251,249,249,1) 100%);
+	background: url(../images/ico/sprites-contact.png) 0px -140px no-repeat, url(../images/ico/sprites-contact.png) 30px -20px no-repeat, -webkit-linear-gradient( 90deg, rgb(224,197,145) 0%, rgba(251,249,249,1) 100%);
+	background: url(../images/ico/sprites-contact.png) 0px -140px no-repeat, url(../images/ico/sprites-contact.png) 30px -20px no-repeat, -ms-linear-gradient( 90deg, rgb(224,197,145) 0%, rgba(251,249,249,1) 100%);
+
+}
+
+.telephone:hover {
+	text-decoration: underline;
+	background: url(../images/ico/sprites-contact.png) 0px -200px no-repeat, url(../images/ico/sprites-contact.png) 30px -20px no-repeat, -moz-linear-gradient( 90deg, rgb(224,197,145) 0%, rgba(251,249,249,1) 100%);
+	background: url(../images/ico/sprites-contact.png) 0px -200px no-repeat, url(../images/ico/sprites-contact.png) 30px -20px no-repeat, -webkit-linear-gradient( 90deg, rgb(224,197,145) 0%, rgba(251,249,249,1) 100%);
+	background: url(../images/ico/sprites-contact.png) 0px -200px no-repeat, url(../images/ico/sprites-contact.png) 30px -20px no-repeat, -ms-linear-gradient( 90deg, rgb(224,197,145) 0%, rgba(251,249,249,1) 100%);
+
+}
+
+.title-block {
+	height: 55px;
+	background-image: -moz-linear-gradient( 90deg, rgb(123,120,120) 0%, rgb(169,168,168) 100%);
+	background-image: -webkit-linear-gradient( 90deg, rgb(123,120,120) 0%, rgb(169,168,168) 100%);
+	background-image: -ms-linear-gradient( 90deg, rgb(123,120,120) 0%, rgb(169,168,168) 100%);
+	box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.3);
+	line-height: 55px;
+	vertical-align: middle;
+	font-size: 24px;
+	color: #eeedec;
+	padding-left: 40px;
+ 	font-family: "Open Sans";
+  	text-shadow: 1px 1px 1px rgba(102, 101, 101, 1);
+  	font-weight: bold;
+}
+
+.content-block {
+	border-radius: 5px;
+	overflow: hidden;
+	width: 650px;
+	min-height: 280px;
+	margin-bottom: 40px;
+	background-image: -moz-linear-gradient( 90deg, rgb(233,230,229) 0%, rgb(251,249,249) 94%, rgb(255,255,255) 100%);
+	background-image: -webkit-linear-gradient( 90deg, rgb(233,230,229) 0%, rgb(251,249,249) 94%, rgb(255,255,255) 100%);
+	background-image: -ms-linear-gradient( 90deg, rgb(233,230,229) 0%, rgb(251,249,249) 94%, rgb(255,255,255) 100%);
+	box-shadow: 0px 2px 1px 0px rgba(9, 9, 9, 0.07),inset 0px -2px 3px 0px rgba(41, 41, 41, 0.05);
+}
+
+.avatar {
+	float: left;
+	height: 150px;
+	width: 150px;
+	border: 10px solid white;
+	border-radius: 50%;
+	margin-left: 40px;
+	margin-top: 40px;
+	box-shadow: 3.236px 2.351px 26.88px 5.12px rgba(236, 232, 227, 0.75),inset 0px 2px 24px 0px rgba(121, 121, 121, 0.23), 0px 0px 0px 2px #e2e1e0;
+}
+
+.baseinfo-container {
+	float: left;
+	margin-top: 38px;
+	padding-left: 35px;
+}
+
+.baseinfo {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	font-size: 14px;
+	color: #727070;
+	line-height: 23px;
+}
+
+.strong {
+	font-weight: bold;
+}
+.strong-skills {
+	font-weight: bold;
+	padding-top: 20px;
+}
+
+.skills {
+	padding-left: 35px;
+	padding-top: 20px;
+	font-size: 14px;
+	color: #727070;
+	line-height: 23px;
+	font-size: 14px;
+	float: left;
+	width: 425px;
+	min-height: 80px;
+}
+
+.container-skills-ico {
+	margin-top: -20px;
+	float: right;
+	min-height: 100%;
+	width: 270px;
+}
+
+.skills-ico {
+	position: relative;
+	float: left;
+	display: inline-block;
+	margin-left: 30px;
+	margin-bottom: 11px;
+	padding-left: 5px;
+	line-height: 19px;
+	height: 19px;
+	background: url(../images/ico/button-back2.png) 0px 0px;
+    font-size: 9px;
+    font-weight: bold;
+    font-family: "Open Sans";
+    color: #1e7465;
+    text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.45);
+ }
+
+.skills-ico:before {
+	content: " ";
+	position: absolute;
+	left: -10px;
+	top: 0px;
+	height: 19px;
+	width: 10px;
+	background: url(../images/ico/button-back1.png) no-repeat;
+}
+
+.skills-ico:after {
+	content: " ";
+	position: absolute;
+	right: -8px;
+	top: 0px;
+	height: 19px;
+	width: 8px;
+	background: url(../images/ico/button-back3.png);
+}
+
+.container-block {
+	width: 560px;
+	margin: 20px 48px 15px 40px;
+}
+
+.experience-ico {
+	float: left;
+	width: 55px;
+	height: 55px;
+	border-radius: 50%;
+	margin-top: 18px;
+	border-radius: 50%;
+	background-color: #f7f7f7;
+	box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.004),inset 1.5px 1.5px 0px 0px rgba(199, 199, 199, 0.75);
+}
+
+.experiance {
+	position: relative;
+	min-height: 95px;
+}
+
+.experience-text-strong {
+	margin-top: 28px;
+	font-weight: bold;
+	display: block; 
+	font-size: 14px;
+}
+
+.experience-text-data {
+	display: block;
+	font-size: 14px;
+}
+
+.experiance-text {
+	float: left;
+	height: 100%;
+	margin-left: 43px;
+}
+
+.experiance:last-child:after {
+	content: none;
+}
+
+.experiance:after {
+	position: absolute;
+	border-radius: 5px;
+	left: 0;
+	bottom: 0px;
+	content: " ";
+	width: 100%;
+	height: 1px;   
+	background-color: #dbdbda; 
+	box-shadow: 0px 0px 2px 1px rgb(245, 244, 249);
+}
+
+
+
