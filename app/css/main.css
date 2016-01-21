@@ -171,16 +171,32 @@ body, html {
 	background: url(../images/ico/sprites-main.png) -83px -17px;
 }
 
+.fb:hover{
+	background: url(../images/ico/sprites-main.png) -143px -17px;
+}
+
 .vk {
 	background: url(../images/ico/sprites-main.png) -865px -16px;
+}
+
+.vk:hover {
+	background: url(../images/ico/sprites-main.png) -930px -16px;
 }
 
 .tw {
 	background: url(../images/ico/sprites-main.png) -649px -17px;
 }
 
+.tw:hover {
+	background: url(../images/ico/sprites-main.png) -723px -17px;
+}
+
 .git {
 	background: url(../images/ico/sprites-main.png) -277px -18px;
+}
+
+.git:hover {
+	background: url(../images/ico/sprites-main.png) -356px -18px;
 }
 
 .nav-ul {
@@ -257,7 +273,7 @@ body, html {
 
 .contacts-list-link {
 	display: block;
-	padding-left: 97px;
+	padding-left: 80px;
 	line-height: 38px;
 	vertical-align: middle;
 	text-decoration: none;
@@ -346,7 +362,7 @@ body, html {
 	box-shadow: 0px 2px 1px 0px rgba(9, 9, 9, 0.07),inset 0px -2px 3px 0px rgba(41, 41, 41, 0.05);
 }
 
-.avatar {
+.avatar-box {
 	float: left;
 	height: 150px;
 	width: 150px;
@@ -354,7 +370,12 @@ body, html {
 	border-radius: 50%;
 	margin-left: 40px;
 	margin-top: 40px;
+	overflow: hidden;
 	box-shadow: 3.236px 2.351px 26.88px 5.12px rgba(236, 232, 227, 0.75),inset 0px 2px 24px 0px rgba(121, 121, 121, 0.23), 0px 0px 0px 2px #e2e1e0;
+}
+
+.avatar {
+	width: 100%;
 }
 
 .baseinfo-container {
