@@ -13,6 +13,7 @@ var gulp = require("gulp"),
 	gulp.task("watch", function() {
 		gulp.watch([
 			"app/*.html",
+			"app/pages/*.html",
 			"app/js/**/*.js",
 			"app/css/**/*.css"
 		]).on("change", browserSync.reload);
