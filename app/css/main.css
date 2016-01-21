@@ -57,7 +57,7 @@ body, html {
 	padding-left: 30px;
 	background: url(../images/ico/sprites-main.png) -511px -6px;
 	color: #9c9c9c;
-	font-weight: bold;
+	font-family: "open_sansbold";
 }
 
 .login:hover {
@@ -69,6 +69,8 @@ body, html {
 	display: table-cell;
 	vertical-align: middle;
 	font-size: 12px;
+	font-family: "open_sanslight";
+	color: #727070;
 }
 
 .header {
@@ -238,12 +240,10 @@ body, html {
 	background-image: -ms-linear-gradient( 90deg, rgb(220,177,93) 0%, rgb(244,204,126) 90%);
 	box-shadow: 0px 2px 1px 0px rgba(9, 9, 9, 0.17),inset 0px 1px 0px 0px rgba(255, 255, 255, 0.25);
 	border-bottom: 1px solid #caa152;
-
   	font-size: 20px;
   	font-family: "open_sanssemibold";
   	color: rgb(208, 152, 44);
   	text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.4);
-
   	padding-left: 27px;
   	vertical-align: middle;
   	line-height: 40px;
@@ -266,6 +266,8 @@ body, html {
 	border-color: rgb(214, 213, 211);
 	box-shadow: inset 0px 2px 2px 0px rgba(114, 112, 112, 0.1);
 	border-top: none;
+	color: #727070;
+	font-size: 14px;
 }
 
 
@@ -357,7 +359,7 @@ body, html {
 
 .baseinfo-container {
 	float: left;
-	margin-top: 38px;
+	margin-top: 30px;
 	padding-left: 35px;
 }
 
@@ -367,20 +369,21 @@ body, html {
 	margin: 0;
 	font-size: 14px;
 	color: #727070;
-	line-height: 23px;
+	line-height: 25px;
 }
 
 .strong {
-	font-weight: bold;
+	font-family: "open_sanssemibold";
+	white-space: pre;
 }
 .strong-skills {
-	font-weight: bold;
+	font-family: "open_sanssemibold";
 	padding-top: 20px;
 }
 
 .skills {
 	padding-left: 35px;
-	padding-top: 20px;
+	padding-top: 10px;
 	font-size: 14px;
 	color: #727070;
 	line-height: 23px;
@@ -391,6 +394,8 @@ body, html {
 }
 
 .container-skills-ico {
+	list-style: none;
+	padding-left: 10px;
 	margin-top: -20px;
 	float: right;
 	min-height: 100%;
@@ -401,15 +406,14 @@ body, html {
 	position: relative;
 	float: left;
 	display: inline-block;
-	margin-left: 30px;
-	margin-bottom: 11px;
+	margin-left: 25px;
+	margin-bottom: 8px;
 	padding-left: 5px;
 	line-height: 19px;
 	height: 19px;
 	background: url(../images/ico/button-back2.png) 0px 0px;
     font-size: 9px;
-    font-weight: bold;
-    font-family: "Open Sans";
+    font-family: "open_sansbold";
     color: #1e7465;
     text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.45);
  }
@@ -435,19 +439,10 @@ body, html {
 }
 
 .container-block {
+	list-style: none;
+	padding: 0;
 	width: 560px;
 	margin: 20px 48px 15px 40px;
-}
-
-.experience-ico {
-	float: left;
-	width: 55px;
-	height: 55px;
-	border-radius: 50%;
-	margin-top: 18px;
-	border-radius: 50%;
-	background-color: #f7f7f7;
-	box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.004),inset 1.5px 1.5px 0px 0px rgba(199, 199, 199, 0.75);
 }
 
 .experiance {
@@ -456,21 +451,37 @@ body, html {
 }
 
 .experience-text-strong {
-	margin-top: 28px;
-	font-weight: bold;
+	margin-bottom: 3px;
+	margin-top: 30px;
 	display: block; 
 	font-size: 14px;
+    font-family: "open_sanssemibold";
+  	color: #727070;
+  	line-height: 1.2;
 }
 
 .experience-text-data {
 	display: block;
+	color: #727070;
 	font-size: 14px;
 }
 
 .experiance-text {
-	float: left;
+	display: inline-block;
 	height: 100%;
-	margin-left: 43px;
+	padding-left: 97px;
+}
+
+.experiance:before{
+	position: absolute;
+	content: "";
+	top: 50%;
+	transform: translateY(-50%);
+	width: 55px;
+	height: 55px;
+	border-radius: 50%;
+	background-color: #f7f7f7;
+	box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.004),inset 1.5px 1.5px 0px 0px rgba(199, 199, 199, 0.75);
 }
 
 .experiance:last-child:after {
@@ -489,3 +500,22 @@ body, html {
 	box-shadow: 0px 0px 2px 1px rgb(245, 244, 249);
 }
 
+.casework:before {
+	background-image: url(../images/ico/sprites-main.png);
+	background-position: -7px -7px;
+}
+
+.school:before {
+	background-image: url(../images/ico/sprites-main.png);
+	background-position: -564px -7px;
+}
+
+.university:before {
+	background-image: url(../images/ico/sprites-main.png);
+	background-position: -424px -7px;
+}
+
+.course:before {
+	background-image: url(../images/ico/sprites-main.png);
+	background-position: -195px -7px;
+}
