@@ -54,33 +54,33 @@
 					<nav class="nav">
 						<ul class="nav-ul">
 							<li class="nav-elem"><a class="nav-link" href="../index.html">Обо мне</a></li>
-							<li class="nav-elem"><a class="nav-link" href="#">Мои Работы</a></li>
+							<li class="nav-elem"><a class="nav-link" href="page-2.html">Мои Работы</a></li>
 							<li class="nav-elem"><a class="nav-link active" href="#">Обратная связь</a></li>
 						</ul>
 					</nav>
 					<div class="contacts">
 						<div class="contacts-title">Контакты</div>
 						<ul class="contacts-list">
-							<li><a href="#" class="contacts-list-link mail">azzazzelko@gmail.com</a></li>
-							<li><a href="#" class="contacts-list-link telephone">+38(095)618-68-48</a></li>
-							<li><a href="#" class="contacts-list-link skype">blackblackdragon</a></li>
+							<li><a href="mailto:azzazzelko@gmail.com" class="contacts-list-link mail">azzazzelko@gmail.com</a></li>
+							<li><a href="skype:+380956186848?call" class="contacts-list-link telephone">+38(095)618-68-48</a></li>
+							<li><a href="skype:blackblackdragon?add" class="contacts-list-link skype">blackblackdragon</a></li>
 						</ul>
 					</div>
 				</aside>
 				<div class="content-area">
 					<section class="content-block clearfix">
-						<div class="title-block title-form">У вас интересный проект? Напиши мне</div>
+						<div class="title-block"><h1 class="title-block-text">У вас интересный проект? Напиши мне</h1></div>
 						<div class="container-form clearfix">
 							<form class="form1" action="#" method="GET">
 								<label class="label inputName"><span class="textLabel">Имя</span><input placeholder="Как к Вам обращаться" class="inputClassic" type="text" name="name"></label>
 								<label class="label inputEmail"><span class="textLabel">Email</span><input placeholder="Куда мне писать" class="inputClassic" type="text" name="email"></label>
 								<label class="label inputText"><span class="textLabel">Сообщение</span><textarea placeholder="Кратко в чем суть" class="textarea inputClassic"></textarea></label>
-								<label class="label inputCode"><span class="textLabel">Введите код, указанный на картинке</span>
-									<div class="capcha-container">
-										<div class="capcha"><img src="../images/captcha.png" height="78" width="188" alt="CAPTCHA"></div>
-										<input placeholder="Введите код" class="inputCode-area inputClassic" type="text" name="code">
-									</div>
+								<label for="input-code" class="label inputCode"><span class="textLabel">Введите код, указанный на картинке</span>
 								</label>
+								<div class="capcha-container">
+									<div class="capcha"><img src="../images/captcha.png" height="78" width="188" alt="CAPTCHA"></div>
+									<input id="input-code" placeholder="Введите код" class="inputCode-area inputClassic" type="text" name="code">
+								</div>
 								<div class="submit-container clearfix">
 									<input class="button button-sumbit" type="submit" value="Отправить">
 									<input class="button button-reset" type="reset" value="Очистить">

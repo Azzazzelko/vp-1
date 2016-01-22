@@ -231,6 +231,17 @@ body, html {
 	box-shadow: inset 0px -2px 3px 0px rgba(41, 41, 41, 0.05);
 }
 
+.nav-link:active:not(.active) {
+	background-image: -moz-linear-gradient( 90deg, rgb(194,192,192) 0%, rgb(227,225,225) 87%, rgb(230,228,228) 90%, rgb(232,231,231) 100%);
+	background-image: -webkit-linear-gradient( 90deg, rgb(194,192,192) 0%, rgb(227,225,225) 87%, rgb(230,228,228) 90%, rgb(232,231,231) 100%);
+	background-image: -ms-linear-gradient( 90deg, rgb(194,192,192) 0%, rgb(227,225,225) 87%, rgb(230,228,228) 90%, rgb(232,231,231) 100%);
+	box-shadow:
+		inset rgba(0,0,0,.8) 0 1px 2px,
+		inset rgba(0,0,0,.05) 0 -1px 0,
+		#fff 0 1px 1px;
+		padding-top: 3px;
+}
+
 .active {
 	background-image: -moz-linear-gradient( 90deg, rgb(62,183,153) 0%, rgb(126,232,206) 100%);
 	background-image: -webkit-linear-gradient( 90deg, rgb(62,183,153) 0%, rgb(126,232,206) 100%);
@@ -338,17 +349,21 @@ body, html {
 	background-image: -webkit-linear-gradient( 90deg, rgb(123,120,120) 0%, rgb(169,168,168) 100%);
 	background-image: -ms-linear-gradient( 90deg, rgb(123,120,120) 0%, rgb(169,168,168) 100%);
 	box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.3);
-	line-height: 55px;
-	vertical-align: middle;
-	font-size: 24px;
-	color: #eeedec;
-	padding-left: 40px;
- 	font-family: "open_sanssemibold";
-  	text-shadow: 1px 1px 1px rgba(102, 101, 101, 1);
   	border: 1px solid #686868;
   	border-radius: 5px 5px 1px 1px;
   	margin-top: -1px;
   	margin-left: -1px;
+}
+
+.title-block-text {
+	margin: 0;
+	margin-left: 40px;
+	line-height: 55px;
+	vertical-align: middle;
+	font-size: 24px;
+	color: #eeedec;
+	font-family: "open_sanssemibold";
+  	text-shadow: 1px 1px 1px rgba(102, 101, 101, 1);
 }
 
 .content-block {
@@ -549,12 +564,8 @@ body, html {
 
 /*PAGE-3 ---> ОБРАТНАЯ СВЯЗЬ*/
 
-.title-form {
-	font-family: "open_sansregular";
-}
-
 .container-form {
-	min-height: 600px;
+	min-height: 800px;
 	width: 405px;
 	margin: 0 auto;
 	margin-top: 35px; 
@@ -662,7 +673,7 @@ textarea {
 	background-image: -ms-linear-gradient( 90deg, rgb(67,183,150) 0%, rgb(128,232,203) 100%);
 	box-shadow: 0px 2px 1px 0px rgba(9, 9, 9, 0.16),inset 0px 1px 0px 0px rgba(255, 255, 255, 0.3);
   	font-size: 14px;
- 	 font-family: "open_sansbold";
+ 	font-family: "open_sansbold";
   	color: rgb(30, 116, 101);
   	line-height: 1.571;
   	text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.6);
@@ -683,9 +694,9 @@ textarea {
 }
 
 .button-sumbit:active {
-	 background-image: -moz-linear-gradient( 90deg, rgb(58,160,135) 0%, rgb(95,220,189) 100%);
-  background-image: -webkit-linear-gradient( 90deg, rgb(58,160,135) 0%, rgb(95,220,189) 100%);
-  background-image: -ms-linear-gradient( 90deg, rgb(58,160,135) 0%, rgb(95,220,189) 100%);
+	background-image: -moz-linear-gradient( 90deg, rgb(58,160,135) 0%, rgb(95,220,189) 100%);
+    background-image: -webkit-linear-gradient( 90deg, rgb(58,160,135) 0%, rgb(95,220,189) 100%);
+    background-image: -ms-linear-gradient( 90deg, rgb(58,160,135) 0%, rgb(95,220,189) 100%);
 	box-shadow:
 	inset rgba(0,0,0,.8) 0 1px 2px,
 	inset rgba(0,0,0,.05) 0 -1px 0,
@@ -694,9 +705,9 @@ textarea {
 }
 
 .button-sumbit:hover {
-  background-image: -moz-linear-gradient( 90deg, rgb(58,160,135) 0%, rgb(95,220,189) 100%);
-  background-image: -webkit-linear-gradient( 90deg, rgb(58,160,135) 0%, rgb(95,220,189) 100%);
-  background-image: -ms-linear-gradient( 90deg, rgb(58,160,135) 0%, rgb(95,220,189) 100%);
+	background-image: -moz-linear-gradient( 90deg, rgb(58,160,135) 0%, rgb(95,220,189) 100%);
+	background-image: -webkit-linear-gradient( 90deg, rgb(58,160,135) 0%, rgb(95,220,189) 100%);
+    background-image: -ms-linear-gradient( 90deg, rgb(58,160,135) 0%, rgb(95,220,189) 100%);
 }
 
 .button-reset:active {
@@ -738,7 +749,6 @@ textarea {
 .myWorks-area-card {
 	display: inline-block;
 	vertical-align: top;
-	min-height: 180px;
 	width: 167px;
 	margin-left: 32px;
 	margin-bottom: 35px;
@@ -758,7 +768,14 @@ textarea {
 
 .card-link:hover:before {
 	position: absolute;
-    content: " ";
+	display: inline-block;
+	vertical-align: middle;
+	line-height: 120px;
+    content: "Подробнее";
+    font-family: ;
+    text-shadow: 1px 1px 3px black;
+    color: white;
+    text-align: center;
     width: 167px;
     height: 120px;
     background: rgba(0,0,0, 0.1);
@@ -801,11 +818,9 @@ textarea {
 	position: relative;
 	display: inline-block;
 	vertical-align: top;
-	margin-left: 32px;
-	margin-bottom: 35px;
 	border-radius: 5px;
 	text-align: center;
-	width: 167px;
+	width: 165px;
 	height: 135px;
 	background-image: #fbfafa;
 	border: solid 1px #a8a8a8;
@@ -858,7 +873,6 @@ textarea {
 	background-image: -moz-linear-gradient( 90deg, rgb(194,192,192) 0%, rgb(227,225,225) 87%, rgb(230,228,228) 90%, rgb(232,231,231) 100%);
 	background-image: -webkit-linear-gradient( 90deg, rgb(194,192,192) 0%, rgb(227,225,225) 87%, rgb(230,228,228) 90%, rgb(232,231,231) 100%);
 	background-image: -ms-linear-gradient( 90deg, rgb(194,192,192) 0%, rgb(227,225,225) 87%, rgb(230,228,228) 90%, rgb(232,231,231) 100%);
-	box-shadow: inset 0px -2px 3px 0px rgba(41, 41, 41, 0.05);
 	box-shadow:
 	inset rgba(0,0,0,.8) 0 1px 2px,
 	inset rgba(0,0,0,.05) 0 -1px 0,
