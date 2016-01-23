@@ -1,1 +1,3 @@
-console.log("Другой текст!");
+if (!Modernizr.placeholder){
+ 	$('input, textarea').placeholder();
+}

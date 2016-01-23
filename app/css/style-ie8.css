@@ -1,0 +1,108 @@
+.nav-link {
+	border-top: 1px solid #dbdbda;
+}
+
+.experiance:before {
+	background-color: #ebebeb;
+}
+
+.card-link:hover:before {
+	background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA9JREFUeNpiYmBgaAAIMAAAjwCD5Hc2/AAAAABJRU5ErkJggg==);
+}
+
+.add-site:hover {
+	background-color: #e8e8e8 ;
+}
+
+.contacts-list-link:hover {
+	background-color: #f3e9d5;
+}
+
+.contacts-list-link:before {
+	content: " ";
+	top: 0;
+	left: 0;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: url(../images/ico/sprites-contact.png) 30px -20px no-repeat;
+}
+
+.contacts-list-link:active:before {
+	content: " ";
+	top: 0;
+	left: 0;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: url(../images/ico/sprites-contact.png) 30px -19px no-repeat;
+}
+
+.mail {
+	position: relative;
+	background-image: url(../images/ico/sprites-contact.png);
+	background-repeat: no-repeat;
+	background-position: 0px -85px;
+}
+
+.telephone {
+	position: relative;
+	background-image: url(../images/ico/sprites-contact.png);
+	background-repeat: no-repeat;
+	background-position:  0px -200px;
+}
+
+.skype {
+	position: relative;
+	background-image: url(../images/ico/sprites-contact.png);
+	background-repeat: no-repeat;
+	background-position: 0px -140px;
+}
+
+.mail:active {
+	background-position: 0px -84px;
+}
+
+.telephone:active {
+	background-position:  0px -199px
+}
+
+.skype:active {
+	background-position: 0px -139px;
+}
+
+
+body {
+	background: none;
+}
+
+#bg {
+  position: fixed; 
+  top: -50%; 
+  left: -50%; 
+  width: 200%; 
+  height: 200%;
+}
+
+#bg img {
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  bottom: 0; 
+  margin: auto; 
+  min-width: 50%;
+  min-height: 50%;
+}
+
+.inputClassic {
+	padding: 10px;
+}
+
+.inputCode-area {
+	padding: 5px;
+} 
+
+.placeholder {
+	color: #abaaa8;
+}

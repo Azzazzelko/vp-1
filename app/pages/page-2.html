@@ -12,8 +12,17 @@
 	<link rel="stylesheet" href="../bower/normalize-css/normalize.css">
 	<link rel="stylesheet" href="../css/main.css">
 	<link rel="stylesheet" type="text/css" href="../fonts/fonts.css">
+	<!--[if IE]>
+	<link rel="stylesheet" href="../css/style-ie8.css">
+	<![endif]-->
+	<script src="../js/modernizr-custom.js"></script>
 </head>
 <body>
+	<!--[if IE]>
+	<div id="bg">
+  		<img src="../images/bg.jpg" alt="">
+	</div>
+	<![endif]-->
 	<div class="wrapper">
 		<header class="header">
 			<div class="container container-width">
@@ -26,22 +35,22 @@
 					</a>
 					<ul class="social">
 						<li class="social-item">
-							<a href="#" class="social-item-link fb">
+							<a href="https://www.facebook.com/" class="social-item-link fb">
 								<span class="text-hide">FB</span>
 							</a>
 						</li>
 						<li class="social-item">
-							<a href="#" class="social-item-link vk">
+							<a href="https://vk.com" class="social-item-link vk">
 								<span class="text-hide">VK</span>
 							</a>
 						</li>
 						<li class="social-item">
-							<a href="#" class="social-item-link tw">
+							<a href="https://twitter.com/" class="social-item-link tw">
 								<span class="text-hide">TW</span>
 							</a>
 						</li>
 						<li class="social-item">
-							<a href="#" class="social-item-link git">
+							<a href="https://github.com/" class="social-item-link git">
 								<span class="text-hide">GIT</span>
 							</a>
 						</li>
@@ -123,6 +132,7 @@
 		</div>
 	</footer>
 	<script type="text/javascript" src="../bower/jquery/jquery.js"></script>
+	<script type="text/javascript" src="../bower/jquery-placeholder/jquery.placeholder.js"></script>
 	<script type="text/javascript" src="../js/main.js"></script>
 </body>
 </html>

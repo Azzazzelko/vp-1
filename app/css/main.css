@@ -34,6 +34,7 @@ body, html {
 	height: 60px;
 	margin-top: -60px;  
 	position: relative;
+	background-color: #fafafa;
 	background-image: -moz-linear-gradient( 90deg, rgb(233,230,229) 0%, rgb(251,249,249) 94%, rgb(255,255,255) 100%);
 	background-image: -webkit-linear-gradient( 90deg, rgb(233,230,229) 0%, rgb(251,249,249) 94%, rgb(255,255,255) 100%);
 	background-image: -ms-linear-gradient( 90deg, rgb(233,230,229) 0%, rgb(251,249,249) 94%, rgb(255,255,255) 100%);
@@ -145,6 +146,7 @@ body, html {
 }
 
 .social-item {
+	background-color: #f3f1f0;
 	margin-left: 10px;
 	display: inline-block;
 	border-radius: 50%;
@@ -176,12 +178,30 @@ body, html {
 	background: url(../images/ico/sprites-main.png) -143px -17px;
 }
 
+.fb:active{
+	background: url(../images/ico/sprites-main.png) -143px -15px;
+	box-shadow:
+		inset rgba(0,0,0,.8) 0 2px 2px,
+		inset rgba(0,0,0,.05) 0 -1px 0,
+		#fff 0 1px 1px;
+		padding-top: 3px;
+}
+
 .vk {
 	background: url(../images/ico/sprites-main.png) -865px -16px;
 }
 
 .vk:hover {
 	background: url(../images/ico/sprites-main.png) -930px -16px;
+}
+
+.vk:active {
+	background: url(../images/ico/sprites-main.png) -930px -14px;
+	box-shadow:
+		inset rgba(0,0,0,.8) 0 2px 2px,
+		inset rgba(0,0,0,.05) 0 -1px 0,
+		#fff 0 1px 1px;
+		padding-top: 3px;
 }
 
 .tw {
@@ -192,12 +212,30 @@ body, html {
 	background: url(../images/ico/sprites-main.png) -723px -17px;
 }
 
+.tw:active {
+	background: url(../images/ico/sprites-main.png) -723px -15px;
+	box-shadow:
+		inset rgba(0,0,0,.8) 0 2px 2px,
+		inset rgba(0,0,0,.05) 0 -1px 0,
+		#fff 0 1px 1px;
+		padding-top: 3px;
+}
+
 .git {
 	background: url(../images/ico/sprites-main.png) -277px -18px;
 }
 
 .git:hover {
 	background: url(../images/ico/sprites-main.png) -356px -18px;
+}
+
+.git:active {
+	background: url(../images/ico/sprites-main.png) -356px -15px;
+	box-shadow:
+		inset rgba(0,0,0,.8) 0 2px 2px,
+		inset rgba(0,0,0,.05) 0 -1px 0,
+		#fff 0 1px 1px;
+		padding-top: 3px;
 }
 
 .nav-ul {
@@ -210,6 +248,7 @@ body, html {
 	display: block;
 	height: 55px;
 	padding-left: 27px;
+	background-color: #f3f1f1;
     background-image: -moz-linear-gradient( 90deg, rgb(233,230,229) 0%, rgb(251,249,249) 94%, rgb(255,255,255) 100%);
     background-image: -webkit-linear-gradient( 90deg, rgb(233,230,229) 0%, rgb(251,249,249) 94%, rgb(255,255,255) 100%);
     background-image: -ms-linear-gradient( 90deg, rgb(233,230,229) 0%, rgb(251,249,249) 94%, rgb(255,255,255) 100%);
@@ -225,6 +264,7 @@ body, html {
 }
 
 .nav-link:hover {
+	background-color: #dddbdb;
 	background-image: -moz-linear-gradient( 90deg, rgb(194,192,192) 0%, rgb(227,225,225) 87%, rgb(230,228,228) 90%, rgb(232,231,231) 100%);
 	background-image: -webkit-linear-gradient( 90deg, rgb(194,192,192) 0%, rgb(227,225,225) 87%, rgb(230,228,228) 90%, rgb(232,231,231) 100%);
 	background-image: -ms-linear-gradient( 90deg, rgb(194,192,192) 0%, rgb(227,225,225) 87%, rgb(230,228,228) 90%, rgb(232,231,231) 100%);
@@ -243,6 +283,7 @@ body, html {
 }
 
 .active {
+	background-color: #54c8ab;
 	background-image: -moz-linear-gradient( 90deg, rgb(62,183,153) 0%, rgb(126,232,206) 100%);
 	background-image: -webkit-linear-gradient( 90deg, rgb(62,183,153) 0%, rgb(126,232,206) 100%);
 	background-image: -ms-linear-gradient( 90deg, rgb(62,183,153) 0%, rgb(126,232,206) 100%);
@@ -253,6 +294,7 @@ body, html {
 }
 
 .active:hover {
+	background-color: #54c8ab;
 	background-image: -moz-linear-gradient( 90deg, rgb(62,183,153) 0%, rgb(126,232,206) 100%);
 	background-image: -webkit-linear-gradient( 90deg, rgb(62,183,153) 0%, rgb(126,232,206) 100%);
 	background-image: -ms-linear-gradient( 90deg, rgb(62,183,153) 0%, rgb(126,232,206) 100%);
@@ -263,6 +305,7 @@ body, html {
 	height: 40px;
 	border-radius: 5px 5px 1px 1px;
 	border: 1px solid #e7bf6f;
+	background-color: #f2ca7c;
 	background-image: -moz-linear-gradient( 90deg, rgb(220,177,93) 0%, rgb(244,204,126) 90%);
 	background-image: -webkit-linear-gradient( 90deg, rgb(220,177,93) 0%, rgb(244,204,126) 90%);
 	background-image: -ms-linear-gradient( 90deg, rgb(220,177,93) 0%, rgb(244,204,126) 90%);
@@ -284,8 +327,10 @@ body, html {
 }
 
 .contacts-list-link {
+	background-color: #fdfcfc;
 	display: block;
 	padding-left: 80px;
+	height: 38px;
 	line-height: 38px;
 	vertical-align: middle;
 	text-decoration: none;
@@ -322,7 +367,18 @@ body, html {
 	background: url(../images/ico/sprites-contact.png) 0px -85px no-repeat, url(../images/ico/sprites-contact.png) 30px -20px no-repeat, -moz-linear-gradient( 90deg, rgb(224,197,145) 0%, rgba(251,249,249,1) 100%);
 	background: url(../images/ico/sprites-contact.png) 0px -85px no-repeat, url(../images/ico/sprites-contact.png) 30px -20px no-repeat, -webkit-linear-gradient( 90deg, rgb(224,197,145) 0%, rgba(251,249,249,1) 100%);
 	background: url(../images/ico/sprites-contact.png) 0px -85px no-repeat, url(../images/ico/sprites-contact.png) 30px -20px no-repeat, -ms-linear-gradient( 90deg, rgb(224,197,145) 0%, rgba(251,249,249,1) 100%);
+}
 
+.mail:active {
+	text-decoration: underline;
+	background: url(../images/ico/sprites-contact.png) 0px -84px no-repeat, url(../images/ico/sprites-contact.png) 30px -19px no-repeat, -moz-linear-gradient( 90deg, rgb(224,197,145) 0%, rgba(251,249,249,1) 100%);
+	background: url(../images/ico/sprites-contact.png) 0px -84px no-repeat, url(../images/ico/sprites-contact.png) 30px -19px no-repeat, -webkit-linear-gradient( 90deg, rgb(224,197,145) 0%, rgba(251,249,249,1) 100%);
+	background: url(../images/ico/sprites-contact.png) 0px -84px no-repeat, url(../images/ico/sprites-contact.png) 30px -19px no-repeat, -ms-linear-gradient( 90deg, rgb(224,197,145) 0%, rgba(251,249,249,1) 100%);
+	box-shadow:
+		inset rgba(0,0,0,.8) 0 1px 2px,
+		inset rgba(0,0,0,.05) 0 -1px 0,
+		#fff 0 1px 1px;
+	padding-top: 1px;
 }
 
 .skype:hover {
@@ -330,7 +386,18 @@ body, html {
 	background: url(../images/ico/sprites-contact.png) 0px -140px no-repeat, url(../images/ico/sprites-contact.png) 30px -20px no-repeat, -moz-linear-gradient( 90deg, rgb(224,197,145) 0%, rgba(251,249,249,1) 100%);
 	background: url(../images/ico/sprites-contact.png) 0px -140px no-repeat, url(../images/ico/sprites-contact.png) 30px -20px no-repeat, -webkit-linear-gradient( 90deg, rgb(224,197,145) 0%, rgba(251,249,249,1) 100%);
 	background: url(../images/ico/sprites-contact.png) 0px -140px no-repeat, url(../images/ico/sprites-contact.png) 30px -20px no-repeat, -ms-linear-gradient( 90deg, rgb(224,197,145) 0%, rgba(251,249,249,1) 100%);
+}
 
+.skype:active {
+	text-decoration: underline;
+	background: url(../images/ico/sprites-contact.png) 0px -139px no-repeat, url(../images/ico/sprites-contact.png) 30px -19px no-repeat, -moz-linear-gradient( 90deg, rgb(224,197,145) 0%, rgba(251,249,249,1) 100%);
+	background: url(../images/ico/sprites-contact.png) 0px -139px no-repeat, url(../images/ico/sprites-contact.png) 30px -19px no-repeat, -webkit-linear-gradient( 90deg, rgb(224,197,145) 0%, rgba(251,249,249,1) 100%);
+	background: url(../images/ico/sprites-contact.png) 0px -139px no-repeat, url(../images/ico/sprites-contact.png) 30px -19px no-repeat, -ms-linear-gradient( 90deg, rgb(224,197,145) 0%, rgba(251,249,249,1) 100%);
+	box-shadow:
+		inset rgba(0,0,0,.8) 0 1px 2px,
+		inset rgba(0,0,0,.05) 0 -1px 0,
+		#fff 0 1px 1px;
+	padding-top: 1px;
 }
 
 .telephone:hover {
@@ -338,13 +405,24 @@ body, html {
 	background: url(../images/ico/sprites-contact.png) 0px -200px no-repeat, url(../images/ico/sprites-contact.png) 30px -20px no-repeat, -moz-linear-gradient( 90deg, rgb(224,197,145) 0%, rgba(251,249,249,1) 100%);
 	background: url(../images/ico/sprites-contact.png) 0px -200px no-repeat, url(../images/ico/sprites-contact.png) 30px -20px no-repeat, -webkit-linear-gradient( 90deg, rgb(224,197,145) 0%, rgba(251,249,249,1) 100%);
 	background: url(../images/ico/sprites-contact.png) 0px -200px no-repeat, url(../images/ico/sprites-contact.png) 30px -20px no-repeat, -ms-linear-gradient( 90deg, rgb(224,197,145) 0%, rgba(251,249,249,1) 100%);
+}
 
+.telephone:active {
+	text-decoration: underline;
+	background: url(../images/ico/sprites-contact.png) 0px -199px no-repeat, url(../images/ico/sprites-contact.png) 30px -19px no-repeat, -moz-linear-gradient( 90deg, rgb(224,197,145) 0%, rgba(251,249,249,1) 100%);
+	background: url(../images/ico/sprites-contact.png) 0px -199px no-repeat, url(../images/ico/sprites-contact.png) 30px -19px no-repeat, -webkit-linear-gradient( 90deg, rgb(224,197,145) 0%, rgba(251,249,249,1) 100%);
+	background: url(../images/ico/sprites-contact.png) 0px -199px no-repeat, url(../images/ico/sprites-contact.png) 30px -19px no-repeat, -ms-linear-gradient( 90deg, rgb(224,197,145) 0%, rgba(251,249,249,1) 100%);
+	box-shadow:
+		inset rgba(0,0,0,.8) 0 1px 2px,
+		inset rgba(0,0,0,.05) 0 -1px 0,
+		#fff 0 1px 1px;
+	padding-top: 1px;
 }
 
 .title-block {
-	box-sizing: none;
 	height: 55px;
 	width: 650px;
+	background-color: #7d7a7a;
 	background-image: -moz-linear-gradient( 90deg, rgb(123,120,120) 0%, rgb(169,168,168) 100%);
 	background-image: -webkit-linear-gradient( 90deg, rgb(123,120,120) 0%, rgb(169,168,168) 100%);
 	background-image: -ms-linear-gradient( 90deg, rgb(123,120,120) 0%, rgb(169,168,168) 100%);
@@ -372,6 +450,7 @@ body, html {
 	width: 650px;
 	min-height: 280px;
 	margin-bottom: 40px;
+	background-color: #f6f5f4;
 	background-image: -moz-linear-gradient( 90deg, rgb(233,230,229) 0%, rgb(251,249,249) 94%, rgb(255,255,255) 100%);
 	background-image: -webkit-linear-gradient( 90deg, rgb(233,230,229) 0%, rgb(251,249,249) 94%, rgb(255,255,255) 100%);
 	background-image: -ms-linear-gradient( 90deg, rgb(233,230,229) 0%, rgb(251,249,249) 94%, rgb(255,255,255) 100%);
@@ -668,6 +747,7 @@ textarea {
 .button-sumbit {
 	float: left;
 	border: 1px outset #6adbbc;
+	background-color: #72ddbf;
 	background-image: -moz-linear-gradient( 90deg, rgb(67,183,150) 0%, rgb(128,232,203) 100%);
 	background-image: -webkit-linear-gradient( 90deg, rgb(67,183,150) 0%, rgb(128,232,203) 100%);
 	background-image: -ms-linear-gradient( 90deg, rgb(67,183,150) 0%, rgb(128,232,203) 100%);
@@ -682,6 +762,7 @@ textarea {
 .button-reset {
 	float: right;
 	border: 1px outset #d2d2d2;
+	background-color: #efedec;
     background-image: -webkit-linear-gradient(left, rgb(233,230,228) 0%, rgb(251,249,249) 94%, rgb(255,255,255) 100%);
     background-image: -o-linear-gradient(left, rgb(233,230,228) 0%, rgb(251,249,249) 94%, rgb(255,255,255) 100%);
     background-image: linear-gradient(to right, rgb(233,230,228) 0%, rgb(251,249,249) 94%, rgb(255,255,255) 100%);
@@ -694,6 +775,7 @@ textarea {
 }
 
 .button-sumbit:active {
+	background-color: #4cbda1;
 	background-image: -moz-linear-gradient( 90deg, rgb(58,160,135) 0%, rgb(95,220,189) 100%);
     background-image: -webkit-linear-gradient( 90deg, rgb(58,160,135) 0%, rgb(95,220,189) 100%);
     background-image: -ms-linear-gradient( 90deg, rgb(58,160,135) 0%, rgb(95,220,189) 100%);
@@ -705,12 +787,14 @@ textarea {
 }
 
 .button-sumbit:hover {
+	background-color: #4cbda1;
 	background-image: -moz-linear-gradient( 90deg, rgb(58,160,135) 0%, rgb(95,220,189) 100%);
 	background-image: -webkit-linear-gradient( 90deg, rgb(58,160,135) 0%, rgb(95,220,189) 100%);
     background-image: -ms-linear-gradient( 90deg, rgb(58,160,135) 0%, rgb(95,220,189) 100%);
 }
 
 .button-reset:active {
+	background-color: #c7c4c4;
 	background-image: -moz-linear-gradient( 90deg, rgb(194,192,192) 0%, rgb(227,225,225) 87%, rgb(230,228,228) 90%, rgb(232,231,231) 100%);
     background-image: -webkit-linear-gradient( 90deg, rgb(194,192,192) 0%, rgb(227,225,225) 87%, rgb(230,228,228) 90%, rgb(232,231,231) 100%);
     background-image: -ms-linear-gradient( 90deg, rgb(194,192,192) 0%, rgb(227,225,225) 87%, rgb(230,228,228) 90%, rgb(232,231,231) 100%);
@@ -723,11 +807,11 @@ textarea {
 }
 
 .button-reset:hover {
+	background-color: #c7c4c4;
     background-image: -moz-linear-gradient( 90deg, rgb(194,192,192) 0%, rgb(227,225,225) 87%, rgb(230,228,228) 90%, rgb(232,231,231) 100%);
     background-image: -webkit-linear-gradient( 90deg, rgb(194,192,192) 0%, rgb(227,225,225) 87%, rgb(230,228,228) 90%, rgb(232,231,231) 100%);
     background-image: -ms-linear-gradient( 90deg, rgb(194,192,192) 0%, rgb(227,225,225) 87%, rgb(230,228,228) 90%, rgb(232,231,231) 100%);
 }
-
 
 
 
@@ -772,7 +856,6 @@ textarea {
 	vertical-align: middle;
 	line-height: 120px;
     content: "Подробнее";
-    font-family: ;
     text-shadow: 1px 1px 3px black;
     color: white;
     text-align: center;
@@ -822,7 +905,6 @@ textarea {
 	text-align: center;
 	width: 165px;
 	height: 135px;
-	background-image: #fbfafa;
 	border: solid 1px #a8a8a8;
     background-image: -moz-linear-gradient( 90deg, rgb(237,235,234) 0%, rgb(251,249,249) 94%, rgb(255,255,255) 100%);
     background-image: -webkit-linear-gradient( 90deg, rgb(237,235,234) 0%, rgb(251,249,249) 94%, rgb(255,255,255) 100%);
