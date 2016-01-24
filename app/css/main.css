@@ -474,9 +474,10 @@ body, html {
 }
 
 .baseinfo-container {
-	float: left;
+	word-wrap: break-word;
+	float: right;
+	width: 423px;
 	margin-top: 30px;
-	padding-left: 35px;
 }
 
 .baseinfo {
@@ -494,28 +495,30 @@ body, html {
 }
 .strong-skills {
 	font-family: "open_sanssemibold";
-	padding-top: 20px;
+	position: absolute;
 }
 
 .skills {
-	padding-left: 35px;
 	padding-top: 10px;
+	padding-right: 10px;
 	font-size: 14px;
 	color: #727070;
 	line-height: 23px;
 	font-size: 14px;
-	float: left;
-	width: 425px;
+	float: right;
+	width: 423px;
 	min-height: 80px;
 }
 
 .container-skills-ico {
 	list-style: none;
-	padding-left: 10px;
-	margin-top: -20px;
+	padding-left: 30px;
+	padding-top: 1px;
+	margin: 0;
 	float: right;
 	min-height: 100%;
-	width: 270px;
+	width: 311px;
+	margin-bottom: 10px;
 }
 
 .skills-ico {
