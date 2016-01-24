@@ -670,6 +670,7 @@ textarea {
 }
 
 .textLabel {
+	font-size: 14px;
 	color: #727070;
 	display: block;
 	margin-bottom: 5px;
