@@ -13,6 +13,7 @@ textarea {
 }
 
 textarea {
+	resize: none;
 	padding-top: 10px;
 }
 

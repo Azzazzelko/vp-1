@@ -238,7 +238,7 @@ body, html {
 		padding-top: 3px;
 }
 
-.nav-ul {
+.nav-list {
 	list-style: none;
 	padding: 0;
 	margin: 0;
@@ -421,7 +421,7 @@ body, html {
 }
 
 .title-block {
-	height: 55px;
+	min-height: 55px;
 	width: 650px;
 	background-color: #7d7a7a;
 	background-image: -moz-linear-gradient( 90deg, rgb(123,120,120) 0%, rgb(169,168,168) 100%);
