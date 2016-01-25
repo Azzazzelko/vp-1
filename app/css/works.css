@@ -1,0 +1,148 @@
+.content-block-myWorks {
+	min-height: 840px;
+}
+
+.container-myWorks {
+	padding: 0;
+	list-style: none;
+	width: 630px;
+	margin: 0 auto;
+	margin-top: 40px;
+}
+
+.myWorks-area-card {
+	display: inline-block;
+	vertical-align: top;
+	width: 167px;
+	margin-left: 32px;
+	margin-bottom: 35px;
+	border: 1px solid #dddddd;
+	background: #ffffff;
+	border-radius: 5px;
+	overflow: hidden;
+}
+
+.card-link {
+	position: relative;
+	text-decoration: none;
+	display: block;
+	height: 155px;
+	background: #f2f2f2;
+}
+
+.card-link:hover:before {
+	position: absolute;
+	display: inline-block;
+	vertical-align: middle;
+	line-height: 120px;
+    content: "Подробнее";
+    text-shadow: 1px 1px 3px black;
+    color: white;
+    text-align: center;
+    width: 167px;
+    height: 120px;
+    background: rgba(0,0,0, 0.1);
+}
+
+.card-image-container {
+	background: #f8f3f3;
+	display: block;
+	height: 120px;
+	text-align: center;
+	border-bottom: 1px solid #dddddd;
+}
+
+.card-text {
+	display: block;
+	text-align: center;
+	vertical-align: middle;
+	font-size: 12px;
+	padding: 10px;
+	color: #727070;
+	font-family: "open_sanslight";
+}
+
+.card-link-text {
+	color: red;
+	display: block;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 33px;
+    color: #727070;
+    font-family: 'open_sanssemibold';
+    font-size: 13px;
+	text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.75);
+	-moz-transform: matrix( 1.02802275960171,0,0,1.02714914341595,0,0);
+	-webkit-transform: matrix( 1.02802275960171,0,0,1.02714914341595,0,0);
+	-ms-transform: matrix( 1.02802275960171,0,0,1.02714914341595,0,0);
+}
+
+.add-site {
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+	border-radius: 5px;
+	text-align: center;
+	width: 165px;
+	height: 135px;
+	border: solid 1px #a8a8a8;
+    background-image: -moz-linear-gradient( 90deg, rgb(237,235,234) 0%, rgb(251,249,249) 94%, rgb(255,255,255) 100%);
+    background-image: -webkit-linear-gradient( 90deg, rgb(237,235,234) 0%, rgb(251,249,249) 94%, rgb(255,255,255) 100%);
+    background-image: -ms-linear-gradient( 90deg, rgb(237,235,234) 0%, rgb(251,249,249) 94%, rgb(255,255,255) 100%);
+    box-shadow: 0px 2px 1px 0px rgba(9, 9, 9, 0.07),inset 0px -2px 3px 0px rgba(41, 41, 41, 0.05);
+}
+
+.add-site-text {
+	display: inline-block;
+	padding-top: 75px;
+	font-size: 14px;
+	font-family: "open_sanssemibold";
+	color: rgb(114, 112, 112);
+	text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.75);
+
+}
+
+.add-site:before{
+	position: absolute;
+	content: "";
+	top: 0;
+	left: 0;
+	bottom: 25px;
+	right: 0;
+	margin: auto auto;
+	width: 55px;
+	height: 55px;
+	border-radius: 50%;
+	background-color: #f7f7f7;
+	box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.004),inset 1.5px 1.5px 0px 0px rgba(199, 199, 199, 0.75);
+	background-image: url(../images/ico/polaroid.png);
+	background-repeat: no-repeat;
+	background-position: 19px 19px;
+}
+
+.add-site:hover {
+  background-image: -moz-linear-gradient( 90deg, rgb(194,192,192) 0%, rgb(227,225,225) 87%, rgb(230,228,228) 90%, rgb(232,231,231) 100%);
+  background-image: -webkit-linear-gradient( 90deg, rgb(194,192,192) 0%, rgb(227,225,225) 87%, rgb(230,228,228) 90%, rgb(232,231,231) 100%);
+  background-image: -ms-linear-gradient( 90deg, rgb(194,192,192) 0%, rgb(227,225,225) 87%, rgb(230,228,228) 90%, rgb(232,231,231) 100%);
+  box-shadow: inset 0px -2px 3px 0px rgba(41, 41, 41, 0.05);
+}
+
+.add-site:hover:before {
+	background-color: #d7d7d7;
+}
+
+.add-site:active {
+	background-image: -moz-linear-gradient( 90deg, rgb(194,192,192) 0%, rgb(227,225,225) 87%, rgb(230,228,228) 90%, rgb(232,231,231) 100%);
+	background-image: -webkit-linear-gradient( 90deg, rgb(194,192,192) 0%, rgb(227,225,225) 87%, rgb(230,228,228) 90%, rgb(232,231,231) 100%);
+	background-image: -ms-linear-gradient( 90deg, rgb(194,192,192) 0%, rgb(227,225,225) 87%, rgb(230,228,228) 90%, rgb(232,231,231) 100%);
+	box-shadow:
+	inset rgba(0,0,0,.8) 0 1px 2px,
+	inset rgba(0,0,0,.05) 0 -1px 0,
+	#fff 0 1px 1px;
+	padding-top: 3px;
+}
+
+.add-site:active:before {
+	background-color: #d7d7d7;
+	bottom: 22px;
+}
