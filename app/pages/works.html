@@ -118,7 +118,7 @@
 								<span class="card-text">Landing page по продажи франшизы снежного бизнеса.</span>
 							</li>
 							<li class="myWorks-area-card">
-								<button class="add-site"><span class="add-site-text">Добавить проект</span></button>	
+								<button class="add-site" id="add-site"><span class="add-site-text">Добавить проект</span></button>	
 							</li>
 						</ul>
 					</section>
@@ -132,6 +132,18 @@
 			<span class="footer-text">@ 2015. Это мой сайт, пожалуйста, не копируйте и не воруйте его!</span>
 		</div>
 	</footer>
+	<div class="popup" id="popUpAdd">
+	    <div class="popup-inner">
+	    	<form action="#" method="GET">
+	    		<label><span class="textLabelForAdd">Название проекта</span><input class="addProject-item" type="text" name="projectName" placeholder="Введите название"></label>
+	    		<label class="addProject-item-img"><span class="textLabelForAdd">Картинка проекта</span><input class="addProject-item" type="text" name="projectImg" placeholder="Загрузите изображение"></label>
+	    		<label><span class="textLabelForAdd">URL проекта</span><input class="addProject-item" type="text" name="projectURL" placeholder="Добавьте ссылку"></label>
+	    		<label><span class="textLabelForAdd">Описание</span><textarea name="AboutProject" class="addProject-item addProject-textarea" placeholder="Пара слов о Вашем проекте"></textarea></label>
+	    		<input class="button button-sumbit" id="popUpSubmit" type="submit" value="Отправить">
+	    		<a href="google.com" id="popUpClose" class="popUpClose"></a>
+	    	</form>
+	    </div>
+	</div>
 	<script type="text/javascript" src="../bower/jquery/jquery.js"></script>
 	<script type="text/javascript" src="../bower/jquery-placeholder/jquery.placeholder.js"></script>
 	<script type="text/javascript" src="../js/main.js"></script>
