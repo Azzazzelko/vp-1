@@ -150,7 +150,7 @@
 /*PopUp..*/
 
 .popup {
-	display: none;
+	display: block;
     width:100%;
     height:100%;
     position:fixed;
@@ -204,7 +204,7 @@
 	margin: 10px 0;
 	height: 40px;
 	border: 1px solid rgb(214, 213, 211);
-	border-radius: 5px 0 0 5px;
+	border-radius: 5px;
 	background-image: -moz-linear-gradient( 90deg, rgb(233,231,231) 0%, rgba(251,249,249,0) 100%);
 	background-image: -webkit-linear-gradient( 90deg, rgb(233,231,231) 0%, rgba(251,249,249,0) 100%);
 	background-image: -ms-linear-gradient( 90deg, rgb(233,231,231) 0%, rgba(251,249,249,0) 100%);
@@ -220,22 +220,14 @@
 	background: url(../images/ico/down-img.png) no-repeat;
 }
 
-/*.addProject-item-img:after {
-	position: absolute;
-	content: " ";
-	left: 271px;
-	top: -50px;
-	width: 55px;
-	height: 43px;
-	background: url(../images/ico/down-img.png) no-repeat;
-}*/
-
 .addProject-item_img {
+	border-radius: 5px 0 0 5px;
 	display: inline-block;
 	width: 83%;
 }
 
 .textLabelForAdd {
+	position: relative;
   	font-size: 14px;
 	color: #727070;
 }
@@ -304,5 +296,81 @@
 
 /*PopUp..END*/
 
+/*PopUp Errors....*/
 
+.textLabelForAdd:before {
+	content: "";
+	position: absolute;
+	display: inline-block;
+	top: 36px;
+	left: -86px;
+	height: 27px;
+	background: url(../images/ico/errorBody.png);
+	border-radius: 5px;
+	line-height: 27px;
+	padding: 0px 5px;
+	vertical-align: middle;
+	font-size: 12px;
+    color: rgb(154, 78, 50);
+    text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.45);
+    font-family: "open_sansbold";
+}
+
+.textLabelForAdd:after {
+	content: "";
+	position: absolute;
+	display: inline-block;
+	top: 36px;
+	left: -18px;
+	width: 14px;
+	height: 27px;
+	background: url(../images/ico/errorArrow.png);
+}
+
+.errorName:before {
+	content: "введите название";
+	left: -141px;
+		display: none;
+}
+
+.errorName:after {
+		display: none;
+}
+
+.errorImg:before {
+	content: "изображение";
+	left: -111px;
+		display: none;
+}
+
+.errorImg:after {
+		display: none;
+}
+
+.errorUrl:before {
+	content: "ссылка на проект";
+	left: -134px;
+		display: none;
+}	
+
+.errorUrl:after {
+		display: none;
+}
+
+.errorAbout:before {
+	content: "описание проекта";
+	left: -139px;
+	top: 73px;
+		display: none;
+}
+
+.errorAbout:after {
+	top: 73px;
+		display: none;
+}
+
+.ErrorBorder {
+	border: 2px solid #e0ac98;
+}
+/*PopUp Errors..END*/
 

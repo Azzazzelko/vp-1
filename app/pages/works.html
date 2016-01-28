@@ -134,13 +134,25 @@
 	</footer>
 	<div class="popup" id="popUpAdd">
 	    <div class="popup-inner">
-	    	<form action="#" method="GET">
-	    		<label><span class="textLabelForAdd">Название проекта</span><input class="addProject-item" type="text" name="projectName" placeholder="Введите название"></label>
-	    		<label><span class="textLabelForAdd">Картинка проекта</span><input class="addProject-item addProject-item_img" type="text" name="projectImg" placeholder="Загрузите изображение" disabled><div class="addProject-item-downImg"></div></label>
-	    		<label><span class="textLabelForAdd">URL проекта</span><input class="addProject-item" type="text" name="projectURL" placeholder="Добавьте ссылку"></label>
-	    		<label><span class="textLabelForAdd">Описание</span><textarea name="AboutProject" class="addProject-item addProject-textarea" placeholder="Пара слов о Вашем проекте"></textarea></label>
+	    	<form action="#" method="GET" name="addProjectForm">
+	    		<label>
+	    			<span class="textLabelForAdd errorName">Название проекта</span>
+	    			<input class="addProject-item" type="text" name="projectName" placeholder="Введите название">
+	    		</label>
+	    		<label>
+	    			<span class="textLabelForAdd errorImg">Картинка проекта</span>
+	    			<input class="addProject-item addProject-item_img" type="text" name="projectImg" placeholder="Загрузите изображение" disabled><div class="addProject-item-downImg"></div>
+	    		</label>
+	    		<label>
+	    			<span class="textLabelForAdd errorUrl">URL проекта</span>
+	    			<input class="addProject-item" type="text" name="projectURL" placeholder="Добавьте ссылку">
+	    		</label>
+	    		<label>
+	    			<span class="textLabelForAdd errorAbout">Описание</span>
+	    			<textarea name="projectAbout" class="addProject-item addProject-textarea" placeholder="Пара слов о Вашем проекте"></textarea>
+	    		</label>
 	    		<input class="button button-sumbit" id="popUpSubmit" type="submit" value="Отправить">
-	    		<a href="google.com" id="popUpClose" class="popUpClose"></a>
+	    		<a href="#" id="popUpClose" class="popUpClose"></a>
 	    	</form>
 	    </div>
 	</div>
