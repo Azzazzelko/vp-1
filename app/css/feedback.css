@@ -23,6 +23,7 @@ textarea {
 }
 
 .textLabel {
+	position: relative;
 	font-size: 14px;
 	color: #727070;
 	display: block;
@@ -168,4 +169,89 @@ textarea {
     background-image: -moz-linear-gradient( 90deg, rgb(194,192,192) 0%, rgb(227,225,225) 87%, rgb(230,228,228) 90%, rgb(232,231,231) 100%);
     background-image: -webkit-linear-gradient( 90deg, rgb(194,192,192) 0%, rgb(227,225,225) 87%, rgb(230,228,228) 90%, rgb(232,231,231) 100%);
     background-image: -ms-linear-gradient( 90deg, rgb(194,192,192) 0%, rgb(227,225,225) 87%, rgb(230,228,228) 90%, rgb(232,231,231) 100%);
+}
+
+/*Errors Form......*/
+
+.textLabel:before {
+	content: "";
+	position: absolute;
+	display: inline-block;
+	top: 30px;
+	left: -86px;
+	height: 27px;
+	background: url(../images/ico/errorBody.png);
+	border-radius: 5px;
+	line-height: 27px;
+	padding: 0px 5px;
+	vertical-align: middle;
+	font-size: 12px;
+    color: rgb(154, 78, 50);
+    text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.45);
+    font-family: "open_sansbold";
+}
+
+.textLabel:after {
+	content: "";
+	position: absolute;
+	display: inline-block;
+	top: 30px;
+	left: -18px;
+	width: 14px;
+	height: 27px;
+	background: url(../images/ico/errorArrow.png) no-repeat;
+}
+
+.errorName:before {
+	content: "Вы не ввели имя";
+	left: -129px;
+		display: block;
+}
+
+.errorName:after {
+		display: block;
+}
+
+.errorEmail:before {
+	content: "Вы не ввели email";
+	left: 194px;
+	width: 115px;
+		display: block;
+}
+
+.errorEmail:after {
+	background: url(../images/ico/errorArrow2.png) no-repeat;
+	left: 185px;
+		display: block;
+}
+
+.errorCode:before {
+	content: "Вы не ввели код";
+	left: 416px;
+	top: 58px;
+	width: 110px;
+		display: block;
+}	
+
+.errorCode:after {
+	background: url(../images/ico/errorArrow2.png) no-repeat;
+		display: block;
+	left: 408px;
+	top: 58px;
+}
+
+.errorAbout:before {
+	content: "Что вы от меня хотите?";
+	left: -172px;
+	top: 95px;
+		display: block;
+}
+
+.errorAbout:after {
+	top: 95px;
+		display: block;
+}
+
+.ErrorBorder {
+	border: 2px solid #e0ac98;
 }

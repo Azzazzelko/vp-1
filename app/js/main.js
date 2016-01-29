@@ -98,8 +98,6 @@ popUpSubmit.on("click", function(e) {
 	alert ("Форма заполнена успешно!");
 })
 
-// Validation..END
-
 var items = form.find('input, textarea').not('[type="submit"], [type="file"]');
 
 items.on("keydown", function(e){
@@ -123,3 +121,6 @@ fImgInp.on("change", function(e) {
 	hideError("errorImg");
 	fImg.removeClass('ErrorBorder');
 })
+
+// Validation..END
+
