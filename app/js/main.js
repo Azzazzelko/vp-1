@@ -13,15 +13,26 @@ popUpAddButton.on("click", function(e) {
 })
 
 popUpClose.on("click", function(e) {
+	e.preventDefault();
 	popUpAdd.fadeOut();
-	return false;
 })
 
 // ..END
 
-// Form Validation
+// Form Validation Add Project
+
+// Кнопка Загрузки картинки...
+var fImg = $(".addProject__img"),
+	fImgName = $(".addProject__img-text"),
+	fImgInp = $("[name=img]");
+
+fImgInp.on("change", function(e) {
+	var indexForSlice = fImgInp.val().lastIndexOf('\\');
+	fImgName.html(fImgInp.val().substring(indexForSlice+1));
+});
+// Кнопка Загрузки картинки...END
+
 var fName = $("[name=projectName]"),
-	fImg = $("[name=projectImg]"),
 	fUrl = $("[name=projectURL]"),
 	fAbout = $("[name=projectAbout]"),
 	form = $("[name=addProjectForm"),
@@ -45,7 +56,7 @@ var hideError = function(NameClass) {
 
 popUpSubmit.on("click", function(e) {
 	var badForm = false;
-	if (fName.val() == "") {
+	if ($.trim(fName.val()) == "") {
 		showError("errorName");
 		fName.addClass('ErrorBorder');
 		badForm = true;
@@ -54,7 +65,7 @@ popUpSubmit.on("click", function(e) {
 		fName.removeClass('ErrorBorder');
 	}
 
-	if (fUrl.val() == "") {
+	if ($.trim(fUrl.val()) == "") {
 		showError("errorUrl");
 		fUrl.addClass('ErrorBorder');
 		badForm = true;
@@ -63,13 +74,22 @@ popUpSubmit.on("click", function(e) {
 		fUrl.removeClass('ErrorBorder');
 	}
 
-	if (fAbout.val() == "") {
+	if ($.trim(fAbout.val()) == "") {
 		showError("errorAbout");
 		fAbout.addClass('ErrorBorder');
 		badForm = true;
 	} else {
 		hideError("errorAbout");
 		fAbout.removeClass('ErrorBorder');
+	}
+
+	if (fImgName.html() == "Загрузите изображение") {
+		showError("errorImg");
+		fImg.addClass('ErrorBorder');
+		badForm = true;
+	} else {
+		hideError("errorImg");
+		fImg.removeClass('ErrorBorder');
 	}
 
 	if (badForm) {
@@ -79,3 +99,27 @@ popUpSubmit.on("click", function(e) {
 })
 
 // Validation..END
+
+var items = form.find('input, textarea').not('[type="submit"], [type="file"]');
+
+items.on("keydown", function(e){
+	var item = e.target;
+	if (item.name == "projectURL") {
+		hideError("errorUrl");
+		fUrl.removeClass('ErrorBorder');
+	}
+	if (item.name == "projectName") {
+		hideError("errorName");
+		fName.removeClass('ErrorBorder');
+	}
+	if (item.name == "projectAbout") {
+		hideError("errorAbout");
+		fAbout.removeClass('ErrorBorder');
+	}
+});
+
+
+fImgInp.on("change", function(e) {
+	hideError("errorImg");
+	fImg.removeClass('ErrorBorder');
+})

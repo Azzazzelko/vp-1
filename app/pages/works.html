@@ -139,10 +139,11 @@
 	    			<span class="textLabelForAdd errorName">Название проекта</span>
 	    			<input class="addProject-item" type="text" name="projectName" placeholder="Введите название">
 	    		</label>
-	    		<label>
-	    			<span class="textLabelForAdd errorImg">Картинка проекта</span>
-	    			<input class="addProject-item addProject-item_img" type="text" name="projectImg" placeholder="Загрузите изображение" disabled><div class="addProject-item-downImg"></div>
-	    		</label>
+				<label class="project__file-container">
+					<span class="textLabelForAdd errorImg">Картинка проекта</span>
+					<div class="addProject-item addProject__img"><span class="addProject__img-text">Загрузите изображение</span></div>
+					<input type="file" name="img" class="form__hide-download">
+				</label>
 	    		<label>
 	    			<span class="textLabelForAdd errorUrl">URL проекта</span>
 	    			<input class="addProject-item" type="text" name="projectURL" placeholder="Добавьте ссылку">
