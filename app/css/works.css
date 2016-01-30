@@ -285,13 +285,13 @@
 	right: 10px;
 	width: 14px;
 	height: 14px;
-	background: url(../images/ico/X.png);
+	background: url(../images/ico/X.png) no-repeat;
 	transition: all 0.1s;
 }
 
 .popUpClose:hover {
 	transform: rotate(360deg);
-	background: url(../images/ico/X-x.png);
+	background: url(../images/ico/X-x.png) no-repeat;
 }
 
 .form__hide-download {

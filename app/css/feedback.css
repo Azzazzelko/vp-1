@@ -205,24 +205,24 @@ textarea {
 .errorName:before {
 	content: "Вы не ввели имя";
 	left: -129px;
-		display: block;
+		display: none;
 }
 
 .errorName:after {
-		display: block;
+		display: none;
 }
 
 .errorEmail:before {
 	content: "Вы не ввели email";
 	left: 194px;
-	width: 115px;
-		display: block;
+	width: 120px;
+		display: none;
 }
 
 .errorEmail:after {
 	background: url(../images/ico/errorArrow2.png) no-repeat;
 	left: 185px;
-		display: block;
+		display: none;
 }
 
 .errorCode:before {
@@ -230,12 +230,12 @@ textarea {
 	left: 416px;
 	top: 58px;
 	width: 110px;
-		display: block;
+		display: none;
 }	
 
 .errorCode:after {
 	background: url(../images/ico/errorArrow2.png) no-repeat;
-		display: block;
+		display: none;
 	left: 408px;
 	top: 58px;
 }
@@ -244,12 +244,12 @@ textarea {
 	content: "Что вы от меня хотите?";
 	left: -172px;
 	top: 95px;
-		display: block;
+		display: none;
 }
 
 .errorAbout:after {
 	top: 95px;
-		display: block;
+		display: none;
 }
 
 .ErrorBorder {
