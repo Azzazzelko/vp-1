@@ -45,6 +45,7 @@ textarea {
 }
 
 .label {
+	position: relative;
 	display: block;
 	margin-bottom: 15px;
 }
@@ -171,14 +172,11 @@ textarea {
     background-image: -ms-linear-gradient( 90deg, rgb(194,192,192) 0%, rgb(227,225,225) 87%, rgb(230,228,228) 90%, rgb(232,231,231) 100%);
 }
 
-/*Errors Form......*/
-
-.textLabel:before {
-	content: "";
+.errorBody {
+	white-space: nowrap;
 	position: absolute;
-	display: inline-block;
-	top: 30px;
-	left: -86px;
+	top: 0;
+	bottom: 0;
 	height: 27px;
 	background: url(../images/ico/errorBody.png);
 	border-radius: 5px;
@@ -191,67 +189,16 @@ textarea {
     font-family: "open_sansbold";
 }
 
-.textLabel:after {
-	content: "";
+.errorHeadRight,
+.errorHead {
 	position: absolute;
-	display: inline-block;
-	top: 30px;
-	left: -18px;
+	top: 0;
+	bottom: 0;
 	width: 14px;
 	height: 27px;
 	background: url(../images/ico/errorArrow.png) no-repeat;
 }
 
-.errorName:before {
-	content: "Вы не ввели имя";
-	left: -129px;
-		display: none;
-}
-
-.errorName:after {
-		display: none;
-}
-
-.errorEmail:before {
-	content: "Вы не ввели email";
-	left: 194px;
-	width: 120px;
-		display: none;
-}
-
-.errorEmail:after {
+.errorHeadRight {
 	background: url(../images/ico/errorArrow2.png) no-repeat;
-	left: 185px;
-		display: none;
-}
-
-.errorCode:before {
-	content: "Вы не ввели код";
-	left: 416px;
-	top: 58px;
-	width: 110px;
-		display: none;
-}	
-
-.errorCode:after {
-	background: url(../images/ico/errorArrow2.png) no-repeat;
-		display: none;
-	left: 408px;
-	top: 58px;
-}
-
-.errorAbout:before {
-	content: "Что вы от меня хотите?";
-	left: -172px;
-	top: 95px;
-		display: none;
-}
-
-.errorAbout:after {
-	top: 95px;
-		display: none;
-}
-
-.ErrorBorder {
-	border: 2px solid #e0ac98;
 }

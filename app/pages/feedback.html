@@ -84,23 +84,23 @@
 						<div class="container-form clearfix">
 							<form name="formFeedback" method="GET">
 								<label class="label inputName">
-									<span class="textLabel errorName">Имя</span>
-									<input placeholder="Как к Вам обращаться" class="inputClassic" type="text" name="name">
+									<span class="textLabel">Имя</span>
+									<input placeholder="Как к Вам обращаться" class="inputClassic" type="text" name="name" data-error="Вы не ввели имя">
 								</label>
 								<label class="label inputEmail">
-									<span class="textLabel errorEmail">Email</span>
-									<input placeholder="Куда мне писать" class="inputClassic" type="email" name="email">
+									<span class="textLabel">Email</span>
+									<input placeholder="Куда мне писать" class="inputClassic" type="email" name="email" data-direction="right" data-error="Вы не ввели email">
 								</label>
 								<label class="label inputText">
-									<span class="textLabel errorAbout">Сообщение</span>
-									<textarea placeholder="Кратко в чем суть" class="textarea inputClassic" name="about"></textarea>
+									<span class="textLabel">Сообщение</span>
+									<textarea placeholder="Кратко в чем суть" class="textarea inputClassic" name="about" data-error="Что вы от меня хотите?"></textarea>
 								</label>
 								<label for="input-code" class="label inputCode">
-									<span class="textLabel errorCode">Введите код, указанный на картинке</span>
+									<span class="textLabel">Введите код, указанный на картинке</span>
 								</label>
 								<div class="capcha-container">
 									<div class="capcha"><img src="../images/captcha.png" height="78" width="188" alt="CAPTCHA"></div>
-									<input id="input-code" placeholder="Введите код" class="inputCode-area inputClassic" type="text" name="code">
+									<input id="input-code" placeholder="Введите код" class="inputCode-area inputClassic" type="text" name="code" data-direction="right" data-error="Вы не ввели код">
 								</div>
 								<div class="submit-container clearfix">
 									<input class="button button-sumbit" type="submit" value="Отправить" id="feedback-submit">

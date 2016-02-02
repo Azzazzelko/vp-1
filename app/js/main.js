@@ -3,185 +3,136 @@ if (!Modernizr.placeholder){
 }
 
 var app = (function(){
-	var popUpAddButton = $("#add-site"),
-		popUpAdd = $("#popUpAdd"),
-		popUpClose = $("#popUpClose"),
-		popUpSubmit = $("#popUpSubmit"),
-		form = $("form"),
-	    fImg = $(".addProject__img"),
-		fImgName = $(".addProject__img-text"),
-		fImgInp = $("[name=img]"),
-		fName = $("[name=name]"),
-		fEmail = $("[name=email]"),
-		fCode = $("[name=code]"),
-		fUrl = $("[name=url]"),
-		fAbout = $("[name=about]"),
-		feedSubmit = $("#feedback-submit"), 
-		feedReset = $("#feedback-reset"),
-	 	items = form.find('input, textarea').not('[type="submit"], [type="file"], [type="reset"]');
+	var fImgName = $(".addProject__img-text"),
+		hiddenImgInp = $("[type='file']"),
+		fakeInput = $(".fakeInput"),
+		items = $("form").find('input, textarea').not('[type="submit"], [type="file"], [type="reset"]');
 
 	var init = function(){
 		setUpListeners();
 	};
 
 	var setUpListeners = function(){
+		$("#add-site").on("click", openPopup);
 
-		popUpAddButton.on("click", openF);
+		$("#popUpClose").on("click", closePopup);
+	
+		$(document).mousedown(closePopupWhileOut);
 
-		popUpClose.on("click", closeF);
-
-		fImgInp.on("change", function(e) {
+		hiddenImgInp.on("change", function(e) {
 			imgNameToDiv(); 
-			removeErrorFromFile();
+			deleteError(fakeInput);
 		});
 
 		items.on("keydown", hideErrorWhilePressKey);
 
-		popUpSubmit.on("click", formValidation);
+		$("#popUpSubmit").on("click", formValidation);
 
-		feedSubmit.on("click", formValidation);
+		$("#feedback-submit").on("click", formValidation);
 
-		feedReset.on("click", hideAllErrors);
+		$("#feedback-reset").on("click", hideAllErrors);
 
 	};
 
-	var closeF = function(e) {
+	var closePopup = function(e) {
 		e.preventDefault();
-		popUpAdd.fadeOut();
+		$("#popUpAdd").fadeOut();
 	};
 
-	var openF = function(e) {
-		popUpAdd.fadeTo(500, 1);
+	var openPopup = function(e) {
+		$("#popUpAdd").fadeTo(500, 1);
 	};
+
+	function closePopupWhileOut(e) {
+		var div = $(".popup-inner"); 
+		if (!div.is(e.target) && div.has(e.target).length === 0) { 
+			$("#popUpAdd").fadeOut(); 
+		}
+	}
 
 	var imgNameToDiv = function(e) {
-		var indexForSlice = fImgInp.val().lastIndexOf('\\');
-		fImgName.html(fImgInp.val().substring(indexForSlice+1));
+		var indexForSlice = hiddenImgInp.val().lastIndexOf('\\');
+		fImgName.html(hiddenImgInp.val().substring(indexForSlice+1));
 	}
-
-	var removeErrorFromFile = function() {
-		hideError("errorImg");
-		fImg.removeClass('ErrorBorder');
-	}
-
-	var showError = function(NameClass) {
-	    var AA = '"append"',
-			code1 = "form.append('<style class=" + AA + ">." + NameClass + ":before{display: block;}</style>')";
-			code2 = "form.append('<style class=" + AA + ">." + NameClass + ":after{display: block;}</style>')";
-		eval(code1);
-		eval(code2);
-	};
-
-	var hideError = function(NameClass) {
-		var AA = '"append"',
-			code1 = "form.append('<style class=" + AA + ">." + NameClass + ":before{display: none;}</style>')";
-			code2 = "form.append('<style class=" + AA + ">." + NameClass + ":after{display: none;}</style>')";
-		eval(code1);
-		eval(code2);
-	};
 
 	var hideErrorWhilePressKey = function(e) {
-		var item = e.target;
-		if (item.name == "url") {
-			hideError("errorUrl");
-			fUrl.removeClass('ErrorBorder');
-		}
-		if (item.name == "name") {
-			hideError("errorName");
-			fName.removeClass('ErrorBorder');
-		}
-		if (item.name == "about") {
-			hideError("errorAbout");
-			fAbout.removeClass('ErrorBorder');
-		}
-		if (item.name == "email") {
-			hideError("errorEmail");
-			fEmail.removeClass('ErrorBorder');
-		}
-		if (item.name == "code") {
-			hideError("errorCode");
-			fCode.removeClass('ErrorBorder');
-		}
+		deleteError($(this));
 	}
 
-	var hideAllErrors = function(e) {
-			hideError("errorUrl");
-			fUrl.removeClass('ErrorBorder');
-		
-			hideError("errorName");
-			fName.removeClass('ErrorBorder');
-		
-			hideError("errorAbout");
-			fAbout.removeClass('ErrorBorder');
-		
-			hideError("errorEmail");
-			fEmail.removeClass('ErrorBorder');
-		
-			hideError("errorCode");
-			fCode.removeClass('ErrorBorder');	
-	}
-
-	var formValidation = function() {
+	var formValidation = function(e) {
 		var badForm = false;
 
-		if ((fEmail.length != 0) && (fEmail.val().indexOf("@") < 0)) {
-			showError("errorEmail");
-			fEmail.addClass('ErrorBorder');
-			badForm = true;
-		} else {
-			hideError("errorEmail");
-			fEmail.removeClass('ErrorBorder');
-		}
+		items.each(function(indx){
+			if ($(this).val().trim() == "") {
+				createError($(this));
+				badForm = true;
+			} else {
+				deleteError($(this));
+			}
+		});
 
-		if ((fCode.length != 0) && ($.trim(fCode.val()) == "")) {
-			showError("errorCode");
-			fCode.addClass('ErrorBorder');
+		if (fImgName.html() == "Загрузите изображение") {
+			createError(fakeInput);
 			badForm = true;
 		} else {
-			hideError("errorCode");
-			fCode.removeClass('ErrorBorder');
-		}
-
-		if ((fName.length != 0) && ($.trim(fName.val()) == "")) {
-			showError("errorName");
-			fName.addClass('ErrorBorder');
-			badForm = true;
-		} else {
-			hideError("errorName");
-			fName.removeClass('ErrorBorder');
-		}
-
-		if ((fUrl.length != 0) && ($.trim(fUrl.val()) == "")) {
-			showError("errorUrl");
-			fUrl.addClass('ErrorBorder');
-			badForm = true;
-		} else {
-			hideError("errorUrl");
-			fUrl.removeClass('ErrorBorder');
-		}
-
-		if ((fAbout.length != 0) && ($.trim(fAbout.val()) == "")) {
-			showError("errorAbout");
-			fAbout.addClass('ErrorBorder');
-			badForm = true;
-		} else {
-			hideError("errorAbout");
-			fAbout.removeClass('ErrorBorder');
-		}
-
-		if ((fImgName.length != 0) && (fImgName.html() == "Загрузите изображение")) {
-			showError("errorImg");
-			fImg.addClass('ErrorBorder');
-			badForm = true;
-		} else {
-			hideError("errorImg");
-			fImg.removeClass('ErrorBorder');
+			deleteError(fakeInput);
 		}
 
 		if (badForm) {
-			return false;
+			e.preventDefault();
 		}
-		
+	}
+
+	function createError(item){
+		var myTop,
+			myRight,
+		    newDiv = $("<div>"),
+		    newDiv2 = $("<div>"),
+		    textData = item.attr("data-error");
+		if(item.attr("data-direction")) {
+			if (item.attr("class").indexOf("HaveError") < 0) {
+				item.css("border", "2px solid #e0ac98").addClass('HaveError');
+				newDiv.appendTo(item.parent());
+				newDiv2.appendTo(item.parent());
+				newDiv.addClass('errorBody');
+				newDiv2.addClass('errorHeadRight'); 
+				item.siblings('.errorBody').text(textData);
+				myRight = item.parent().outerWidth() + 5;
+				myTop = item.position().top + item.outerHeight(true)/2 - newDiv.innerHeight()/2;
+				newDiv.css({ "top" : myTop+"px", "left" : myRight+9+"px"});
+				newDiv2.css({ "top" : myTop+"px", "left" : myRight+"px"})
+			}
+
+		} else {
+			if (item.attr("class").indexOf("HaveError") < 0) {
+				item.css("border", "2px solid #e0ac98").addClass('HaveError');
+				newDiv.appendTo(item.parent());
+				newDiv2.appendTo(item.parent());
+				newDiv.addClass('errorBody');
+				newDiv2.addClass('errorHead'); 
+				item.siblings('.errorBody').text(textData);
+				myRight = item.parent().outerWidth() + 5;
+				myTop = item.position().top + item.outerHeight(true)/2 - newDiv.innerHeight()/2;
+				newDiv.css({ "top" : myTop+"px", "right" : myRight+9+"px"});
+				newDiv2.css({ "top" : myTop+"px", "right" : myRight+"px"})
+			}
+		}	
+	};
+
+	function deleteError(item){
+		item.removeClass('HaveError');
+		item.siblings(".errorBody").remove();
+		item.siblings(".errorHead").remove();
+		item.siblings(".errorHeadRight").remove();
+		item.css("border", "");
+	}
+
+	function hideAllErrors(){
+		items.each(function(indx){
+			if ($(this).val().trim() == "") {
+				deleteError($(this));
+			};
+		});
 	}
 
 	return {

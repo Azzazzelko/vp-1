@@ -135,22 +135,22 @@
 	<div class="popup" id="popUpAdd">
 	    <div class="popup-inner">
 	    	<form action="#" method="GET" name="addProjectForm">
-	    		<label>
-	    			<span class="textLabelForAdd errorName">Название проекта</span>
-	    			<input class="addProject-item" type="text" name="name" placeholder="Введите название">
+	    		<label class="labelBlock">
+	    			<span class="textLabelForAdd">Название проекта</span>
+	    			<input class="addProject-item" type="text" name="name" placeholder="Введите название" data-error="Введите название">
 	    		</label>
-				<label class="project__file-container">
-					<span class="textLabelForAdd errorImg">Картинка проекта</span>
-					<div class="addProject-item addProject__img"><span class="addProject__img-text">Загрузите изображение</span></div>
+				<label class="project__file-container labelBlock">
+					<span class="textLabelForAdd">Картинка проекта</span>
+					<div class="addProject-item addProject__img fakeInput" data-error="Добавьте изображение"><span class="addProject__img-text">Загрузите изображение</span></div>
 					<input type="file" name="img" class="form__hide-download">
 				</label>
-	    		<label>
-	    			<span class="textLabelForAdd errorUrl">URL проекта</span>
-	    			<input class="addProject-item" type="text" name="url" placeholder="Добавьте ссылку">
+	    		<label class="labelBlock">
+	    			<span class="textLabelForAdd">URL проекта</span>
+	    			<input class="addProject-item" type="text" name="url" placeholder="Добавьте ссылку" data-error="Вы не добавили ссылку">
 	    		</label>
-	    		<label>
-	    			<span class="textLabelForAdd errorAbout">Описание</span>
-	    			<textarea name="about" class="addProject-item addProject-textarea" placeholder="Пара слов о Вашем проекте"></textarea>
+	    		<label class="labelBlock">
+	    			<span class="textLabelForAdd">Описание</span>
+	    			<textarea name="about" class="addProject-item addProject-textarea" placeholder="Пара слов о Вашем проекте" data-error="Описание проекта обязательно"></textarea>
 	    		</label>
 	    		<input class="button button-sumbit" id="popUpSubmit" type="submit" value="Отправить">
 	    		<a href="#" id="popUpClose" class="popUpClose"></a>

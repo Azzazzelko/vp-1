@@ -319,16 +319,21 @@
 	background: url(../images/ico/down-img.png) no-repeat 269px -1px;
 }
 
+.labelBlock {
+	position: relative;
+	display: block;
+}
 /*PopUp..END*/
 
-/*PopUp Errors....*/
 
-.textLabelForAdd:before {
-	content: "";
+/*NEW EROORS*/
+
+.errorBody {
+	white-space: nowrap;
 	position: absolute;
-	display: inline-block;
-	top: 36px;
-	left: -86px;
+	top: 0;
+	bottom: 0;
+	right: 340px;
 	height: 27px;
 	background: url(../images/ico/errorBody.png);
 	border-radius: 5px;
@@ -341,61 +346,15 @@
     font-family: "open_sansbold";
 }
 
-.textLabelForAdd:after {
-	content: "";
+.errorHead {
 	position: absolute;
-	display: inline-block;
-	top: 36px;
-	left: -18px;
+	top: 0;
+	bottom: 0;
+	right: 330px;
 	width: 14px;
 	height: 27px;
 	background: url(../images/ico/errorArrow.png) no-repeat;
 }
 
-.errorName:before {
-	content: "Введите название";
-	left: -141px;
-		display: none;
-}
 
-.errorName:after {
-		display: none;
-}
-
-.errorImg:before {
-	content: "Добавьте изображение";
-	left: -173px;
-		display: none;
-}
-
-.errorImg:after {
-		display: none;
-}
-
-.errorUrl:before {
-	content: "Вы не добавили ссылку";
-	left: -173px;
-		display: none;
-}	
-
-.errorUrl:after {
-		display: none;
-}
-
-.errorAbout:before {
-	content: "Описание проекта обязательно";
-	left: -225px;
-	top: 73px;
-		display: none;
-}
-
-.errorAbout:after {
-	top: 73px;
-		display: none;
-}
-
-.ErrorBorder {
-	border: 2px solid #e0ac98;
-}
-/*PopUp Errors..END*/
 
