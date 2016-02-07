@@ -1,7 +1,3 @@
-if (!Modernizr.placeholder){
- 	$('input, textarea').placeholder();
-}
-
 var app = (function(){
 	var fImgName = $(".addProject__img-text"),		// span - с текстом, в будущем содержащим имя выбранного файла.	
 		hiddenImgInp = $("[type='file']"),			// наш импут-файл, который должен быть как-то скрыт.
@@ -10,6 +6,7 @@ var app = (function(){
 
 	var init = function(){
 		setUpListeners();
+		crutchesForBadBrowsers();
 	};
 
 	var setUpListeners = function(){
@@ -141,6 +138,18 @@ var app = (function(){
 			console.log("Проблемка..");
 		});
 	}
+
+	function crutchesForBadBrowsers(){ // == Ф-ция определяет, если нет какой-то ф-ции в браузере, то делаем её ручками.
+	if (!Modernizr.placeholder){
+ 		$('input, textarea').placeholder(); // Плейсхолдеры для ИЕ8
+	}
+
+	if(typeof String.prototype.trim !== 'function') { // Если в браузере нет ф-ции trim(), то сделаем её.
+	  String.prototype.trim = function() {
+	    return this.replace(/^\s+|\s+$/g, ''); 
+	  }
+	}
+};
 
 	return {
 		init:init
